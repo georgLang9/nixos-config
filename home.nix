@@ -3,8 +3,9 @@
 {
 
   imports = [
-    ./zsh
     ./firefox
+    ./wezterm
+    ./zsh
   ];
 
   home.username = "bonesaw";
@@ -47,9 +48,20 @@
     spotify
   ];
 
+  # if use vscode in wayland, uncomment this line
+  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
   programs.vscode = {
     enable = true;
     package = pkgs.vscode.fhs;
+    userSettings = {
+      "telemetry.enableTelemetry" = false;
+      "telemetry.enableCrashReporter" = false;
+      "editor.tabSize" = 2;
+      "editor.fontFamily" = "JetBrainsMono Nerd Font";
+      "editor.fontLigatures" = true;
+      "terminal.integrated.fontFamily" = "JetBrainsMono Nerd Font";
+    };
+
     extensions = with pkgs.vscode-extensions; [
       vscodevim.vim
       bbenoist.nix
