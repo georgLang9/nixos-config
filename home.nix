@@ -44,6 +44,7 @@
   home.packages = with pkgs; [
     discord
     betterdiscordctl
+    spotify
   ];
 
   programs.vscode = {
