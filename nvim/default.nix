@@ -18,7 +18,7 @@
   };
 
   # config files 
-  home.file.".config/neovim" = {
+  home.file.".config/nvim" = {
       source = ./config;
       recursive = true;
   };
