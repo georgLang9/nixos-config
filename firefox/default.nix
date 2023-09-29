@@ -46,7 +46,7 @@
                 ];
 
                 #TODO: Install NUR for extensions
-                extensions = [
+                extensions = with pkgs.nur.repos.rycee.firefox-addons; [
 
                 ];
             };

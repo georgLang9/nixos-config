@@ -4,6 +4,7 @@
 
   imports = [
     ./zsh
+    ./firefox
   ];
 
   home.username = "bonesaw";
