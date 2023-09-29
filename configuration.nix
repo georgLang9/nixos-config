@@ -118,7 +118,6 @@
   };
 
   # Allow unfree packages
-  #TODO: add NUR to .config/nixpkgs/config.nix for home-manager
   nixpkgs.config = {
     allowUnfree = true;
     packageOverrides = pkgs: {
@@ -134,6 +133,7 @@
     git
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+
   ];
 
   fonts.packages = with pkgs; [

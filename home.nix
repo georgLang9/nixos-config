@@ -47,6 +47,8 @@
     discord
     betterdiscordctl
     spotify
+
+    lazygit
   ];
 
   # if use vscode in wayland, uncomment this line
