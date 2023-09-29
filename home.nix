@@ -4,6 +4,7 @@
 
   imports = [
     ./firefox
+    ./nvim
     ./wezterm
     ./zsh
   ];
@@ -28,7 +29,7 @@
 
   home.sessionVariables = {
     # set default applications
-    EDITOR = "vim";
+    EDITOR = "nvim";
     BROWSER = "firefox";
     #EDITOR = "vim";
   };
@@ -61,6 +62,7 @@
       "editor.fontSize" = 16;
       "editor.lineHeight" = 20;
       "terminal.integrated.fontFamily" = "JetBrainsMono Nerd Font";
+      "vim.smartRelativeLine" = true;
     };
 
     extensions = with pkgs.vscode-extensions; [
