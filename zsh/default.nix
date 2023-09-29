@@ -17,7 +17,7 @@
 
         oh-my-zsh = {
             enable = true;
-            plugins = [ "git" "sudo" "fzf"];
+            plugins = [ "git" "sudo" "fzf" "vi-mode"];
 
             #TODO: Install and enable powerlevel10k for oh my zsh
             theme = "robbyrussell";
