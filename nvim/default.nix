@@ -17,6 +17,12 @@
     '';
   };
 
+  # config files 
+  home.file.".config/neovim" = {
+      source = ./config;
+      recursive = true;
+  };
+
   home = {
     packages = with pkgs; [
       # Add LSP, DAP, linters and formatters here
@@ -36,5 +42,7 @@
     );
   };
 
-  environment.variables.EDITOR = "nvim";
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
 }
