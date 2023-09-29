@@ -122,6 +122,10 @@
     wget
   ];
 
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
+  ];
+
   environment.variables.EDITOR = "vim";
 
   # Some programs need SUID wrappers, can be configured further or are
