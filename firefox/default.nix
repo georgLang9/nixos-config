@@ -10,7 +10,6 @@
             bonesaw = {
                 id = 0;
                 name = "bonesaw";
-                default = true;
                 search = {
                     default = "Google";
                     force = true;
@@ -22,7 +21,7 @@
 
                 # All firefox settings from about:config can be enabled here
                 # Home-manager will convert all JSON-compatible values into strings
-                setting = {
+                settings = {
                     "browser.startup.homepage" = "https://google.com";
                     "browser.search.region" = "DE";
                 };
