@@ -14,15 +14,15 @@ end
 config.enable_wayland = true
 
 -- Window
-local window = require("window")
-window.apply_to_config(config)
+-- local window = require("window")
+-- window.apply_to_config(config)
 
 -- Background
 local background = require("background")
 background.apply_to_config(config)
 
--- local color = require("color")
--- color.apply_to_config(config)
+local color = require("color")
+color.apply_to_config(config)
 
 local font = require("font")
 font.apply_to_config(config)

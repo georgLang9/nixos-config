@@ -7,7 +7,7 @@ function windows.apply_to_config(config)
 		font = wezterm.font({ family = "Liga SFMono Nerd Font", weight = "Regular" }),
 	}
 
-	config.hide_tab_bar_if_only_one_tab = true
+	config.hide_tab_bar_if_only_one_tab = false
 	config.use_fancy_tab_bar = false
 end
 
