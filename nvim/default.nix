@@ -3,6 +3,10 @@
   config,
   ...
 }: {
+  imports = [
+    ./lunarvim
+  ];
+
   programs.neovim = {
     enable = true;
 
@@ -19,7 +23,7 @@
 
   # config files 
   home.file.".config/nvim" = {
-      source = ./config;
+      source = ./lunarvim/config;
       recursive = true;
   };
 
@@ -32,6 +36,9 @@
       llvmPackages.clang-unwrapped # c/c++ tools with clang-tools such as clangd
       cmake
       cmake-language-server
+
+      fd
+      ripgrep
     ]
     ++ (
       if pkgs.stdenv.isDarwin
