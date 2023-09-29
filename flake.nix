@@ -13,6 +13,10 @@
 
     # Official NixOS package source, using nixos-unstable branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    # NUR package source
+    nur.url = "github:nix-community/NUR";
+
     # home-manager, used for managing user configuration
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -34,7 +38,7 @@
   # 
   # The `@` syntax here is used to alias the attribute set of the
   # inputs's parameter, making it convenient to use inside the function.
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nur, ... }@inputs: {
     nixosConfigurations = {
       # By default, NixOS will try to refer the nixosConfiguration with
       # its hostname, so the system named `nixos-test` will use this one.
@@ -90,6 +94,18 @@
           # old configuration file can still take effect.
           # Note: configuration.nix itself is also a Nix Module,
           ./configuration.nix
+
+          # NUR: https://github.com/nix-community/NUR
+          { nixpkgs.overlays = [ nur.overlay ]; }
+          ({ pkgs, ... }:
+            let
+              nur-no-pkgs = import nur {
+                nurpkgs = import nixpkgs { system = "x86_64-linux"; };
+              };
+            in {
+              imports = [ nur-no-pkgs.repos.iopq.modules.xraya  ];
+              services.xraya.enable = true;
+            })
 
           # make home-manager as a module of nixos
           # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
