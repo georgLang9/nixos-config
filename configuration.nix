@@ -111,15 +111,12 @@
     isNormalUser = true;
     description = "bonesaw";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      firefox
-    #  thunderbird
-    ];
   };
 
-  # Allow unfree packages
   nixpkgs.config = {
+    # Allow unfree packages
     allowUnfree = true;
+    # Install NUR Repo
     packageOverrides = pkgs: {
       nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
         inherit pkgs;
@@ -133,7 +130,6 @@
     git
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
-
   ];
 
   fonts.packages = with pkgs; [
@@ -166,5 +162,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
-
 }
