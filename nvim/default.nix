@@ -19,7 +19,7 @@
 
   # config files 
   home.file.".config/nvim" = {
-      source = ./lazyvim;
+      source = ./kickstart;
       recursive = true;
       executable = true;
   };
