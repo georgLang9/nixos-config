@@ -11,14 +11,10 @@
 
     withNodeJs = true;
     withPython3 = true;
-
-    extraConfig = ''
-      set number relativenumber
-    '';
   };
 
   # config files 
-  home.file.".config/nvim" = {
+  home.file.".config/nvim/" = {
       source = ./kickstart;
       recursive = true;
       executable = true;
