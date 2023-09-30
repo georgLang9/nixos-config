@@ -19,6 +19,7 @@ return {
       },
     },
   },
+
   -- [[ Configure Telescope ]]
   -- See `:help telescope` and `:help telescope.setup()`
   require('telescope').setup {
