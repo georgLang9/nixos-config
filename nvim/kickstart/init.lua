@@ -64,8 +64,8 @@ require('lazy').setup({
     lazy = false;
   },
 
-  spec = { { import = 'plugins' } },
-  config = { { import = 'config' } },
+  spec = { { import = 'plugins' } }
 })
 
+require "options"
 require "keymaps"

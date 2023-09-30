@@ -1,5 +1,3 @@
-return {
-  config = function()
     -- [[ Setting options ]]
     -- See `:help vim.o`
     -- NOTE: You can change these options as you wish!
@@ -27,6 +25,8 @@ return {
     -- Save undo history
     vim.o.undofile = true
 
+    vim.o.expandtab = true
+
     -- Case-insensitive searching UNLESS \C or capital in search
     vim.o.ignorecase = true
     vim.o.smartcase = true
@@ -46,5 +46,3 @@ return {
 
     -- The line beneath this is called `modeline`. See `:help modeline`
     -- vim: ts=2 sts=2 sw=2 et
-  end,
-}
