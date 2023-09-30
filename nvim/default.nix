@@ -71,8 +71,4 @@
       ]
     );
   };
-
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
 }
