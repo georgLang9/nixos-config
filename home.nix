@@ -5,6 +5,7 @@
   imports = [
     ./firefox
     ./nvim
+    ./thunderbird
     ./wezterm
     ./zsh
   ];
