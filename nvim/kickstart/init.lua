@@ -64,7 +64,18 @@ require('lazy').setup({
     lazy = false;
   },
 
-  spec = { { import = 'plugins' } }
+  -- Must be loaded before anything related to it, e.g. lsp, formatterc, etc...
+  require 'plugins.util.mason',
+
+  spec = { 
+    { import = 'plugins.autocompletion' },
+    { import = 'plugins.debugging' },
+    { import = 'plugins.formatter' },
+    { import = 'plugins.linting' },
+    { import = 'plugins.navigation' },
+    { import = 'plugins.ui' },
+    { import = 'plugins.util' },
+   }
 })
 
 require "options"
