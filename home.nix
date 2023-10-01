@@ -6,6 +6,7 @@
     ./firefox
     ./nvim
     ./thunderbird
+    ./vscode
     ./wezterm
     ./zsh
   ];
@@ -32,7 +33,6 @@
     # set default applications
     EDITOR = "nvim";
     BROWSER = "firefox";
-    #EDITOR = "vim";
   };
 
 
@@ -52,27 +52,6 @@
     lazygit
   ];
 
-  # if use vscode in wayland, uncomment this line
-  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  programs.vscode = {
-    enable = true;
-    package = pkgs.vscode.fhs;
-    userSettings = {
-      "telemetry.enableTelemetry" = false;
-      "telemetry.enableCrashReporter" = false;
-      "editor.tabSize" = 2;
-      "editor.fontFamily" = "JetBrainsMono Nerd Font";
-      "editor.fontSize" = 16;
-      "editor.lineHeight" = 20;
-      "terminal.integrated.fontFamily" = "JetBrainsMono Nerd Font";
-      "vim.smartRelativeLine" = true;
-    };
-
-    extensions = with pkgs.vscode-extensions; [
-      vscodevim.vim
-      bbenoist.nix
-    ];
-  };
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
