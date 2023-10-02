@@ -8,20 +8,18 @@
       betterdiscordctl
       spotify
 
-      neovim
       unzip
       lazygit
 
       # languages & tools
-      python
+      python3
       nodejs
-      cargo
       go
       lua
       typescript
 
       rustup
-      cargo
+      #cargo
 
       gcc # c/c++ compiler, required by nvim-treesitter!
       llvmPackages.clang-unwrapped # c/c++ tools with clang-tools such as clangd
