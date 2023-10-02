@@ -12,6 +12,7 @@
       ./modules/network.nix
       ./modules/nix-settings.nix
       ./modules/packages.nix
+      ./modules/shell.nix
       ./modules/sound.nix
       ./modules/system.nix
       ./modules/user.nix
