@@ -8,14 +8,14 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./modules/locales.nix
-      ./modules/network.nix
-      ./modules/nix-settings.nix
-      ./modules/packages.nix
-      ./modules/shell.nix
-      ./modules/sound.nix
-      ./modules/system.nix
-      ./modules/user.nix
+      ./locales.nix
+      ./network.nix
+      ./nix-settings.nix
+      ./packages.nix
+      ./shell.nix
+      ./sound.nix
+      ./system.nix
+      ./user.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
