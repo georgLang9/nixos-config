@@ -9,6 +9,7 @@
     ./vscode
     ./wezterm
     ./zsh
+    ./packages.nix
   ];
 
   home.username = "bonesaw";
@@ -38,16 +39,6 @@
     userName = "Bonesaw";
     userEmail = "langgeorg61@gmail.com";
   };
-
-  # Packages that should be installed to the user profile.
-  home.packages = with pkgs; [
-    discord
-    betterdiscordctl
-    spotify
-
-    lazygit
-  ];
-
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
