@@ -18,4 +18,4 @@ lvim.keys.normal_mode["<S-h>"] = ":bprevious<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":bnext<CR>"
 
 -- Close buffer
-lvim.keys.which_key.mappings["<b-d>"] = ":bd<CR>"
+lvim.builtin.which_key.mappings["<b-d>"] = ":bd<CR>"
