@@ -66,7 +66,7 @@
           # Import the configuration.nix here, so that the
           # old configuration file can still take effect.
           # Note: configuration.nix itself is also a Nix Module,
-          ./configuration.nix
+          ./modules/configuration.nix
 
           # NUR: https://github.com/nix-community/NUR
           { nixpkgs.overlays = [ nur.overlay ]; }
