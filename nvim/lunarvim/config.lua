@@ -8,5 +8,5 @@
 lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
 
 -- Switch between buffer
-lvim.keys.normal_mode["<S-h>"] = "bprevious<CR>"
-lvim.keys.normal_mode["<S-l>"] = "bnext<CR>"
+lvim.keys.normal_mode["<S-h>"] = ":bprevious<CR>"
+lvim.keys.normal_mode["<S-l>"] = ":bnext<CR>"
