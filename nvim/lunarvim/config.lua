@@ -4,4 +4,5 @@
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
-lvim.keys.normal_mode["<C-s>"];
+-- Save current buffer 
+lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
