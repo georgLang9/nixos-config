@@ -6,21 +6,12 @@
     ./nvim
     ./thunderbird
     ./vscode
-    ./wezterm
-    ./zsh
+    ./shell
     ./packages.nix
   ];
 
   home.username = "bonesaw";
   home.homeDirectory = "/home/bonesaw";
-
-  # link the configuration file in current directory to the specified location in home directory
-  # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
-
-  # encode the file content in nix configuration file directly
-  # home.file.".xxx".text = ''
-  #     xxx
-  # '';
 
   home.sessionVariables = {
     # set default applications
