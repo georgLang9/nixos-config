@@ -127,12 +127,6 @@ nix.gc = {
   environment.shells = with pkgs; [ zsh ];
   environment.pathsToLink = [ "/share/zsh" ]; # Enable completion for system packages (e.g. systemd)
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.bonesaw = {
-    isNormalUser = true;
-    description = "bonesaw";
-    extraGroups = [ "networkmanager" "wheel" ];
-  };
 
   nixpkgs.config = {
     # Allow unfree packages
@@ -154,10 +148,16 @@ nix.gc = {
   ];
 
   virtualisation.docker.enable = true;
-  users.users.bonesaw.extraGroups = [ "docker" ];
   #TODO: Only activate when fs type is btrfs
   #virtualisation.docker.storageDriver = "btrfs";
-  virtualisation.oci-containers.containers = {}; # Runs listed images as systemd services
+  virtualisation.oci-containers.containers = {}; # Runs images as systemd services
+
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.bonesaw = {
+    isNormalUser = true;
+    description = "bonesaw";
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
+  };
 
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" "ComicShannsMono"]; })
