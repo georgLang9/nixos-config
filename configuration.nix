@@ -17,12 +17,12 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
-  # Perform garbage collection weekly to maintain low disk usage
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 1w";
-  };
+# Perform garbage collection weekly to maintain low disk usage
+nix.gc = {
+  automatic = true;
+  dates = "weekly";
+  options = "--delete-older-than 1w";
+};
 
   # Optimize storage
   nix.settings.auto-optimise-store = true;
@@ -154,7 +154,7 @@
   ];
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono"]; })
+    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" "ComicShannsMono"]; })
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
