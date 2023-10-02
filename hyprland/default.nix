@@ -1,10 +1,10 @@
-{config, pkgs, ...}: {
+{ pkgs, ...}: {
   wayland.windowManager.hyprland.extraConfig = ''
   '';
 
-  programs.enable = {
+  home.packages = with pkgs; [
     dunst
-  };
+  ];
 
   wayland.windowManager.hyprland.plugins = [
     # Examples of adding plugins:
