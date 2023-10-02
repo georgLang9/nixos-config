@@ -10,8 +10,10 @@ vim.opt.relativenumber = true
 -- 2 Spaces for each tab
 vim.opt.tabstop = 2
 
--- Save current buffer 
+-- Save current buffer and format
 lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
+lvim.format_on_save.enabled = true -- enable format on save
+lvim.format_on_save.pattern = {} -- add patterns here
 
 -- Switch between buffers
 lvim.keys.normal_mode["<S-h>"] = ":bprevious<CR>"
