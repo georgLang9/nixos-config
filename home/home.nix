@@ -13,16 +13,6 @@
   home.username = "bonesaw";
   home.homeDirectory = "/home/bonesaw";
 
-  home.sessionVariables = {
-    # set default applications
-    EDITOR = "lvim";
-    BROWSER = "firefox";
-  };
-
-  home.sessionPath = [
-    "$HOME/.local/bin"
-  ];
-
   # Basic configuration of git
   programs.git = {
     enable = true;
