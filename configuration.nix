@@ -153,6 +153,12 @@ nix.gc = {
     wget
   ];
 
+  virtualisation.docker.enable = true;
+  users.users.bonesaw.extraGroups = [ "docker" ];
+  #TODO: Only activate when fs type is btrfs
+  #virtualisation.docker.storageDriver = "btrfs";
+  virtualisation.oci-containers.containers = {}; # Runs listed images as systemd services
+
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" "ComicShannsMono"]; })
   ];
