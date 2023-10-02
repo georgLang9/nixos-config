@@ -10,6 +10,8 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
+config.hide_mouse_cursor_when_typing = false
+
 -- ==================================================================
 config.enable_wayland = true
 
