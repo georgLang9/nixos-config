@@ -1,6 +1,5 @@
 {
   pkgs,
-  config,
   ...
 }: {
   # if use vscode in wayland, uncomment this line
