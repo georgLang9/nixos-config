@@ -23,6 +23,10 @@
             theme = "robbyrussell";
         };
 
+        envExtra = ''
+            export PATH=/home/bonesaw/.local/bin:$PATH
+        '';
+
         initExtra = ''
             # Enables command auto-correction
             ENABLE_CORRECTION="true"

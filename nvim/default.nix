@@ -14,8 +14,8 @@
   };
 
   # config files 
-  home.file.".config/nvim/" = {
-      source = ./kickstart;
+  home.file.".config/lvim/" = {
+      source = ./lunarvim;
       recursive = true;
       executable = true;
   };

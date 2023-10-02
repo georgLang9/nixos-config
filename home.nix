@@ -31,10 +31,13 @@
 
   home.sessionVariables = {
     # set default applications
-    EDITOR = "nvim";
+    EDITOR = "lvim";
     BROWSER = "firefox";
   };
 
+  home.sessionPath = [
+    "$HOME/.local/bin"
+  ];
 
   # Basic configuration of git
   programs.git = {
