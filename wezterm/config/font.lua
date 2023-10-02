@@ -15,7 +15,7 @@ function font.apply_to_config(config)
 		{ family = "Symbols Nerd Font" },
 	})
 
-	config.font_size = 13
+	config.font_size = 14
 	config.line_height = 1.0
 end
 
