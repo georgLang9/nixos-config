@@ -5,6 +5,8 @@
         enable = true;
         autocd = true;
 
+        cdpath = [ "~"];
+
         dotDir = ".config/zsh";
 
         enableCompletion = true;
@@ -24,6 +26,11 @@
         envExtra = ''
             export PATH=/home/bonesaw/.local/bin:$PATH
         '';
+
+        shellAliases = {
+          cd = "z";
+          nrs = "nixos-rebuild switch";
+        };
 
         initExtra = ''
             # Enables command auto-correction
