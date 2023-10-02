@@ -81,8 +81,8 @@
           })
 
           # Activate hyprland module
-          hyprland.homeManagerModules.default
-          {wayland.windowManager.hyprland.enable = true;}
+          #hyprland.homeManagerModules.default
+          #{wayland.windowManager.hyprland.enable = true;}
 
           # Make home-manager as a module of nixos
           # so that home-manager Configuration will
@@ -94,7 +94,7 @@
             home-manager.useUserPackages = true;
 
             # TODO replace bonesaw with your own username
-            home-manager.users.bonesaw = import ./home.nix;
+            home-manager.users.bonesaw = import ./home/home.nix;
 
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
