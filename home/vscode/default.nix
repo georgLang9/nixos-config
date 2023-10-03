@@ -1,28 +1,26 @@
 {
   pkgs,
+  nix-vscode-extensions,
   ...
-}: {
+}:
+  let 
+    all-extensions = nix-vscode-extensions.extensions.${pkgs.system};
+    extensionList = with all-extensions; [ 
+      vscode-marketplace.ms-azuretools.vscode-docker
+    ];
+  in 
+  {
   # if use vscode in wayland, uncomment this line
   # environment.sessionVariables.NIXOS_OZONE_WL = "1";
   programs.vscode = {
     enable = true;
     package = pkgs.vscode.fhs;
-    userSettings = {
-      "telemetry.enableTelemetry" = false;
-      "telemetry.enableCrashReporter" = false;
-      "editor.tabSize" = 2;
-      "editor.fontFamily" = "JetBrainsMono Nerd Font";
-      "editor.fontSize" = 16;
-      "editor.lineHeight" = 20;
-      "terminal.integrated.fontFamily" = "JetBrainsMono Nerd Font";
-      "vim.smartRelativeLine" = true;
-    };
+    userSettings = import ./settings.nix {inherit pkgs;};
 
     extensions = with pkgs.vscode-extensions; [
       vscodevim.vim
       bbenoist.nix
-      vscode-marketplace.ms-azuretools.vscode-docker
-    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+    ] ++ extensionList ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       # Example to add a addon from the marketplace
       # {
       #   name = "remote-ssh-edit";

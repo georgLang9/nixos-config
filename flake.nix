@@ -7,6 +7,9 @@
 
     # NUR package source
     nur.url = "github:nix-community/NUR";
+
+    # Provides access to all vscode extensions
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     
     # Hyprland 
     hyprland.url = "github:hyprwm/Hyprland";
@@ -18,11 +21,12 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nur, ... }: {
+  outputs = { self, nixpkgs, home-manager, nur, nix-vscode-extensions, ... }@inputs: {
     nixosConfigurations = {
       "nixos" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
+        specialArgs = inputs;
         modules = [
           ./modules/configuration.nix
 
@@ -46,6 +50,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = inputs;
             home-manager.users.bonesaw = import ./home/home.nix;
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
