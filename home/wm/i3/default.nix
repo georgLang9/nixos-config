@@ -1,14 +1,12 @@
-{ pkgs, ... }: {
-  xsession.windowManager.i3 = {
-    enable = true;
+{ pkgs, ... }: 
 
-    config = {
-      fonts = [ "ComicShannsMono"];
-    };
-
+{
+  xsession.windowManager.i3.enable = true;
+  home.file.".config/i3/" = {
+    source = ./config;
+    executable = true;
+    recursive = true;
   };
-
-  home.file.".config/i3/config" = ./config;
 
   home.packages = with pkgs; [
     dmenu
