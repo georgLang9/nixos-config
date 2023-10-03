@@ -34,7 +34,7 @@
       ccls # c/c++
       gopls
       nodePackages.typescript-language-server
-      pkgs.nodePackages.vscode-langservers-extracted # html, css, json, eslint
+      nodePackages.vscode-langservers-extracted # html, css, json, eslint
       nodePackages.yaml-language-server
       sumneko-lua-language-server
       nil # nix
