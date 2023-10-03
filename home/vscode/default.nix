@@ -6,6 +6,7 @@
   let 
     all-extensions = nix-vscode-extensions.extensions.${pkgs.system};
     extensionList = with all-extensions; [ 
+      # For wasm bachelor
       vscode-marketplace.ms-azuretools.vscode-docker
       vscode-marketplace.ms-vscode-remote.remote-containers
     ];
