@@ -7,12 +7,11 @@
 {
   imports = [
     #./gnome.nix
-    ./i3/i3.nix
+    #./i3/i3.nix
   ];
 
   # Bootloader.
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
   # Enable CUPS to print documents.

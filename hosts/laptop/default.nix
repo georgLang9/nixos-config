@@ -8,15 +8,17 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./locales.nix
-      ./network.nix
-      ./nix-settings.nix
-      ./packages.nix
-      ./shell.nix
-      ./sound.nix
-      ./system/system.nix
-      ./user.nix
+      ../../modules/locales.nix
+      ../../modules/network.nix
+      ../../modules/nix-settings.nix
+      ../../modules/packages.nix
+      ../../modules/shell.nix
+      ../../modules/sound.nix
+      ../../modules/system/i3/i3.nix.nix
+      ../../modules/user.nix
     ];
+
+  boot.loader.grub.device = "/dev/nvme0n1";
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
