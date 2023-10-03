@@ -1,10 +1,8 @@
 { pkgs, ... }: {
   xsession.windowManager.i3 = {
     enable = true;
+
     extraPackages = with pkgs; [
-      dmenu
-      i3status
-      i3lock
     ];
 
     config = {
@@ -12,6 +10,12 @@
     };
 
   };
+
+  packages = with pkgs; [
+    dmenu
+    i3status
+    i3lock
+  ];
 
   services.picom.enable = true;
 } 
