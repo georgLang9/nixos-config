@@ -18,7 +18,7 @@
       ../../modules/user.nix
     ];
 
-  boot.loader.grub.device = "/dev/nvme0n1";
+  boot.loader.grub.device = "/dev/nvme0n1p2";
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
