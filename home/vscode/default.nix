@@ -21,6 +21,7 @@
     extensions = with pkgs.vscode-extensions; [
       vscodevim.vim
       bbenoist.nix
+      vscode-marketplace.ms-azuretools.vscode-docker
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       # Example to add a addon from the marketplace
       # {
