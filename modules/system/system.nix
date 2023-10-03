@@ -6,7 +6,8 @@
 
 {
   imports = [
-    ./gnome.nix
+    #./gnome.nix
+    ./i3/i3.nix
   ];
 
   # Bootloader.
