@@ -14,7 +14,7 @@
       ../../modules/packages.nix
       ../../modules/shell.nix
       ../../modules/sound.nix
-      ../../modules/system/i3/i3.nix.nix
+      ../../modules/system/i3/i3.nix
       ../../modules/user.nix
     ];
 
