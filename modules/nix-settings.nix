@@ -16,8 +16,6 @@
   nix.settings.auto-optimise-store = true;
 
   # Limit the number of generations to keep
-  boot.loader.systemd-boot.configurationLimit = 10;
-  # boot.loader.grub.configurationLimit = 10;
 
   nixpkgs.config = {
     # Allow unfree packages

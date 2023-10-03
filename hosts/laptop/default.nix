@@ -18,7 +18,16 @@
       ../../modules/user.nix
     ];
 
-  boot.loader.grub.device = "/dev/nvme0n1p2";
+  boot.loader = {
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot/efi";
+    };
+
+    systemd-boot.enable = true;
+    systemd-boot.editor = false;
+    systemd-boot.configurationLimit = 10;
+  };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

@@ -10,10 +10,6 @@
     #./i3/i3.nix
   ];
 
-  # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.useOSProber = true;
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
