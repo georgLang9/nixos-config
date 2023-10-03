@@ -11,6 +11,9 @@
       unzip
       lazygit
 
+      # hyprland
+      dunst
+
       # languages & tools
       python3
       nodejs
