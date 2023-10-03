@@ -5,12 +5,6 @@
 { pkgs, ... }:
 
 {
-  # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
-
-  # Enable the X11 windowing system.
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
@@ -38,16 +32,9 @@
     # gnome-system-monitor gnome-disk-utility pkgs.gnome-connections gnome-screenshot
   ];
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
   # Configure keymap in X11
   services.xserver = {
     layout = "de";
     xkbVariant = "us";
   };
-
-  fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono" "ComicShannsMono"]; })
-  ];
 }

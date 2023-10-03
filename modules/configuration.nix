@@ -14,7 +14,7 @@
       ./packages.nix
       ./shell.nix
       ./sound.nix
-      ./system.nix
+      ./system/system.nix
       ./user.nix
     ];
 
