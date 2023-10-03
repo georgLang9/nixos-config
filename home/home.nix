@@ -7,6 +7,7 @@
     ./vscode
     ./shell
     ./packages.nix
+    ./wm/i3
   ];
 
   home.username = "bonesaw";
