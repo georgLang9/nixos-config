@@ -1,10 +1,4 @@
 { pkgs, ... }:
-let
-  # Fully persisted and backed up links
-  mkPersistentLink = path: pkgs.runCommand "persistent-link" {} ''
-    ln -s /nix/persistent/bonesaw/${path} $out
-  '';
-in
 {
   imports = [
     ./firefox
@@ -17,9 +11,6 @@ in
 
   home.username = "bonesaw";
   home.homeDirectory = "/home/bonesaw";
-
-  # Create directories
-  home.file."Projects".source = mkPersistentLink "Projects";
 
   # Basic configuration of git
   programs.git = {
