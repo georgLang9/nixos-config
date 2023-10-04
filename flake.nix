@@ -12,7 +12,9 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     
     # Hyprland 
-    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+    };
 
     # home-manager, used for managing user configuration
     home-manager = {
@@ -21,7 +23,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nur, nix-vscode-extensions, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, hyprland, nur, nix-vscode-extensions, ... }@inputs: {
     nixosConfigurations = {
       "vm" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";

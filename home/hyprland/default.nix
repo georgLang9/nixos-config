@@ -1,9 +1,12 @@
 {
+  pkgs,
+  hyprland,
   ...
 }: {
   wayland.windowManager.hyprland = {
     enable = true;
     systemdIntegration = true;
+    package = hyprland.packages.${pkgs.system}.hyprland.override {legacyRenderer = true; };
     xwayland.enable = true;
     #extraConfig = config;
   };
