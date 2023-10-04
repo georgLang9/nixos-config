@@ -28,7 +28,6 @@
         '';
 
         shellAliases = {
-          cd = "z";
           nrs = "nixos-rebuild switch";
         };
 
