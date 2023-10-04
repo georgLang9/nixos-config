@@ -29,8 +29,8 @@
 
         shellAliases = {
           nrs = "nixos-rebuild switch";
-          nrslap = "nixos-rebuild switch --flake '~/nixos-config/#laptop'";
-          nrsvm = "nixos-rebuild switch --flake '~/nixos-config/#vm'";
+          nrslap = "nixos-rebuild switch --flake 'nixos-config/#laptop'";
+          nrsvm = "nixos-rebuild switch --flake 'nixos-config/#vm'";
         };
 
         initExtra = ''

@@ -1,8 +1,15 @@
 {
   ...
 }: {
-  wayland.windowManager.hyprland.enable = true;  
-  home.file.".config/hypr".source = ./hyprland.conf;
+  wayland.windowManager.hyprland = {
+    enable = true;
+    #extraConfig = config;
+  };
+
+  home.file.".config/hypr" = {
+    source = ./hypr;
+    recursive = true;
+  };
 
   programs.waybar = {
     enable = true;
