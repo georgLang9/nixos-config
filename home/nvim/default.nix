@@ -13,7 +13,7 @@
 
   # config files 
   home.file.".config/nvim/lua/config" = {
-      source = ./lua.;
+      source = ./lua/config;
       recursive = true;
       executable = true;
   };
