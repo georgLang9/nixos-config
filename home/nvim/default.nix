@@ -12,8 +12,15 @@
   };
 
   # config files 
-  home.file.".config/lvim/" = {
-      source = ./lunarvim;
+  home.file.".config/nvim/lua/config" = {
+      source = ./lua.;
+      recursive = true;
+      executable = true;
+  };
+
+  # plugins
+  home.file.".config/nvim/lua/plugins" = {
+      source = ./lua/plugins;
       recursive = true;
       executable = true;
   };
