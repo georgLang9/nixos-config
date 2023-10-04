@@ -14,6 +14,7 @@
       ../../modules/packages.nix
       ../../modules/shell.nix
       ../../modules/sound.nix
+      ../../modules/system/system.nix
       ../../modules/system/gnome.nix
       ../../modules/user.nix
     ];
