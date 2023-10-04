@@ -4,7 +4,7 @@ function font.apply_to_config(config)
 	-- Font
 	-- Available Fonts:
 	config.font = wezterm.font_with_fallback({
-		{ family = "ComicShanns Nerd Font" },
+		{ family = "ComicShannsMono Nerd Font" },
 		{ family = "JetBrainsMono Nerd Font" },
 		{ family = "Hack Nerd Font" },
 		{ family = "FiraCode Nerd Font" },
