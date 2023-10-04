@@ -3,6 +3,8 @@
 }: {
   wayland.windowManager.hyprland = {
     enable = true;
+    systemdIntegration = true;
+    xwayland.enable = true;
     #extraConfig = config;
   };
 
